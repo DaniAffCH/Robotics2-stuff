@@ -1,6 +1,6 @@
 # Robotics2-stuff
 
-Facciamo un check di quello che siamo sicuri al 100% che funciona e la roba da testare.
+Facciamo un check di quello che siamo sicuri al 100% che funziona e la roba da testare.
 
 | Script | Tested | Description |
 | ------------- | ------------- | ------------- |
