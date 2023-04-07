@@ -8,6 +8,7 @@ Facciamo un check di quello che siamo sicuri al 100% che funziona e la roba da t
 | wpinv.m  | :heavy_check_mark: | Weighted pseudoinverse of Jacobian |
 | MovingFrames2R.m  | :heavy_multiplication_x: | Apply moving frames to 2R robot |
 | MovingFrames3R.m  | :heavy_multiplication_x: | Apply moving frames to 3R robot |
+| DHMatrix.m  | :heavy_check_mark: | Compute homogeneous transf. from DH table parameters |
 
 
 ### Roba che potrebbe essere utile implementare
