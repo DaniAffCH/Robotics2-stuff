@@ -4,6 +4,6 @@ Facciamo un check di quello che siamo sicuri al 100% che funciona e la roba da t
 
 :heavy_check_mark:
 
-| Script | Tested |
-| ------------- | ------------- |
-| calibrationStep.m  | :heavy_multiplication_x: |
+| Script | Tested | Description |
+| ------------- | ------------- | ------------- |
+| calibrationStep.m  | :heavy_multiplication_x: | Single step of calibration algorithm |
