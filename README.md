@@ -2,8 +2,7 @@
 
 Facciamo un check di quello che siamo sicuri al 100% che funciona e la roba da testare.
 
-:heavy_check_mark:
-
 | Script | Tested | Description |
 | ------------- | ------------- | ------------- |
 | calibrationStep.m  | :heavy_multiplication_x: | Single step of calibration algorithm |
+| wpinv.m  | :heavy_check_mark: | Weighted pseudoinverse of Jacobian |
