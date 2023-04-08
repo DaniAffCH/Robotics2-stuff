@@ -9,7 +9,7 @@ Facciamo un check di quello che siamo sicuri al 100% che funziona e la roba da t
 | movingFrames2R.m  | :heavy_multiplication_x: | Apply moving frames (Dynamic model estimation) to 2R robot |
 | movingFrames3R.m  | :heavy_multiplication_x: | Apply moving frames (Dynamic model estimation) to 3R robot |
 | DHMatrix.m  | :heavy_check_mark: | Compute homogeneous transf. from DH table parameters |
-| Factorization.m  | :heavy_check_mark: | Compute the Christoffel factorization $c(q, \dot{q}) = S\dot{q}$|
+|  factorization.m  | :heavy_check_mark: | Compute the Christoffel factorization $c(q, \dot{q}) = S\dot{q}$|
 
 ### Roba che potrebbe essere utile implementare
 
