@@ -22,7 +22,7 @@ function [T, A] = DHMatrix(arrays)
         A{i} = R;
         T = T * R;   
     end
-
+    
     if isa(T, 'sym')
         T = simplify(T);
     end
