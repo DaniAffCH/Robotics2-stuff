@@ -13,5 +13,4 @@ Facciamo un check di quello che siamo sicuri al 100% che funziona e la roba da t
 
 ### Roba che potrebbe essere utile implementare
 
-- Fattorizzazione da $c(q, \dot{q}) = S\dot{q}$
 - Task priority algorithm
