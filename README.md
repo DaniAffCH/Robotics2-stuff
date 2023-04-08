@@ -4,7 +4,7 @@ Facciamo un check di quello che siamo sicuri al 100% che funziona e la roba da t
 
 | Script | Tested | Description |
 | ------------- | ------------- | ------------- |
-| calibrationStep.m  | :heavy_multiplication_x: | Single step of calibration algorithm |
+| calibrationStep.m  | :heavy_check_mark: | Single step of calibration algorithm |
 | wpinv.m  | :heavy_check_mark: | Weighted pseudoinverse of Jacobian |
 | movingFrames2R.m  | :heavy_multiplication_x: | Apply moving frames (Dynamic model estimation) to 2R robot |
 | movingFrames3R.m  | :heavy_multiplication_x: | Apply moving frames (Dynamic model estimation) to 3R robot |
