@@ -10,7 +10,7 @@ Facciamo un check di quello che siamo sicuri al 100% che funziona e la roba da t
 | movingFrames3R.m  | :heavy_multiplication_x: | Apply moving frames (Dynamic model estimation) to 3R robot |
 | DHMatrix.m  | :heavy_check_mark: | Compute homogeneous transf. from DH table parameters |
 |  factorization.m  | :heavy_check_mark: | Compute the Christoffel factorization $c(q, \dot{q}) = S\dot{q}$|
+| taskPriority.m | :heavy_multiplication_x: | Compute Task Priority algorithm up to 2 task |
 
 ### Roba che potrebbe essere utile implementare
 
-- Task priority algorithm
