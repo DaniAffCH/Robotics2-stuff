@@ -1,4 +1,4 @@
-function [calibOffset] = calibration_step(f, r, alpha, a, d, theta, active)
+function [calibOffset] = calibrationStep(f, r, alpha, a, d, theta, active)
 % CALIBRATION_STEP computes ONE STEP of calibration algorithm
 % 
 % PARAMETERS: 

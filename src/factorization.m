@@ -7,18 +7,18 @@ function [S] = factorization(M,q,qdot)
 %   -S: factorization such that c(q,qdot)=S*qdot and Mdot-2S is skew-symmetric
 
     size=length(q);
-    S=eye(size)
-    S=sym(S)
+    S=eye(size);
+    S=sym(S);
     for i = 1:size
         C=jacobian(M(:,i),q)+transpose(jacobian(M(:,i),q));
-        aux=eye(size)
-        aux=sym(aux)
+        aux=eye(size);
+        aux=sym(aux);
         for j=1:size
-            aux(j,:)=jacobian(M(j,:),q(i))
-        end;
+            aux(j,:)=jacobian(M(j,:),q(i));
+        end
         C=C-aux;
         C=C/2;
-        disp("Christoffel symbol: ");
+        fprintf(1,'Christoffel c%d = \n',i);
         disp(C);
         S(i,:)=qdot*C;
-    end;
+    end
