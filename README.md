@@ -14,5 +14,9 @@ Facciamo un check di quello che siamo sicuri al 100% che funziona e la roba da t
 | external dynamic submodule | :heavy_check_mark: | It isn't fully tested yet but most of the scripts are fine |
 
 
-### Roba che potrebbe essere utile implementare
+### Installing
 
+Pay attention to the --recursive flag. It is required to clone the submodules as well.
+```bash
+git clone --recursive https://github.com/DaniAffCH/Robotics2-stuff.git
+```
