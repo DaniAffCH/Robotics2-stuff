@@ -22,3 +22,4 @@ function [S] = factorization(M,q,qdot)
         disp(C);
         S(i,:)=qdot*C;
     end
+    S = simplify(S);
