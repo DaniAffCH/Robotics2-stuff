@@ -1,7 +1,5 @@
 # Robotics2-stuff
 
-Facciamo un check di quello che siamo sicuri al 100% che funziona e la roba da testare.
-
 | Script | Tested | Description |
 | ------------- | ------------- | ------------- |
 | calibrationStep.m  | :heavy_check_mark: | Single step of calibration algorithm |
