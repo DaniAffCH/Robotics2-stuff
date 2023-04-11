@@ -16,7 +16,7 @@ Facciamo un check di quello che siamo sicuri al 100% che funziona e la roba da t
 
 ### Installing
 
-Pay attention to the --recursive flag. It is required to clone the submodules as well.
+Pay attention to the `--recursive` flag. It is required to clone also the submodules.
 ```bash
 git clone --recursive https://github.com/DaniAffCH/Robotics2-stuff.git
 ```
