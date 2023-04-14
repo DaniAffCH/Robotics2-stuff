@@ -1,22 +1,23 @@
-function [q_dot_k] = task_priority(n, J, r_dot)
+function [q_dot_k] = n_task_priority(n_tasks, n, J, r_dot)
 
     % takes as input:
-    % n = number of tasks
+    % n_tasks = number of tasks
+    % n = number of joint
     % J = list of Jacobian computed in the actual configuration {J1(q), J2(q), ...}
     % r_dot = list of desired EE velocities {r_dot_1, r_dot_2, ...}
     % Note: kp = k-1
     % Note: the order of lists provides the priority of tasks
 
-    for k = 0:n
+    for k = 0:n_tasks
         if k == 0
-            P_k = eye(3,3);
+            P_k = eye(n,n);
             q_dot_k = 0;
             
             P = {P_k};
             q_dot = {q_dot_k};
             
         elseif k == 1
-            P_k = eye(3,3) - pinv(J{k}) * J{k};
+            P_k = eye(n,n) - pinv(J{k}) * J{k};
             q_dot_k = vpa(pinv(J{k})*r_dot{k},4);
     
             P{1,k} = P_k;
