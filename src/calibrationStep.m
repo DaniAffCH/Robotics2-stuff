@@ -13,7 +13,7 @@ function [calibOffset] = calibrationStep(f, r, alpha, a, d, theta, active)
 %             adjust the 'a' parameters of DH table).
 % 
 % USAGE EXAMPLE: 
-%   calibration_step(r, [1.6925,0.7425],[],[l1,l2;1,1],[],[q1,q2;pi/4,-pi/4],[0,1,0,0])
+%   calibrationStep(p, [1.6925,0.7425],[],[l1,l2;1,1],[],[q1,q2;pi/4,-pi/4],[0,1,0,0])
 
 
 
