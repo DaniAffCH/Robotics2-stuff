@@ -5,6 +5,7 @@
 | calibrationStep.m  | :heavy_check_mark: | Single step of calibration algorithm | [@DaniAffCH](https://www.github.com/DaniAffCH) |
 | wpinv.m  | :heavy_check_mark: | Weighted pseudoinverse of Jacobian | [@DaniAffCH](https://www.github.com/DaniAffCH) |
 | MovingFrameGeneric.m  | :heavy_check_mark: | Computes the Moving Frames coefficients (one step) | [@DaniAffCH](https://www.github.com/DaniAffCH) |
+| PlanarNR_COMinZero.m.m  | :heavy_check_mark: | Computes the Center Of Mass position in frame 0. It works only for planar-fully revolute robots. It has a dependency with the submodule | [@DaniAffCH](https://www.github.com/DaniAffCH) |
 | movingFrames2R.m  | :heavy_multiplication_x: | Apply moving frames (Dynamic model estimation) to 2R robot | [@luigi-ga](https://www.github.com/luigi-ga) |
 | movingFrames3R.m  | :heavy_multiplication_x: | Apply moving frames (Dynamic model estimation) to 3R robot | [@luigi-ga](https://www.github.com/luigi-ga) |
 | DHMatrix.m  | :heavy_check_mark: | Compute homogeneous transf. from DH table parameters | [@luigi-ga](https://www.github.com/luigi-ga) |
