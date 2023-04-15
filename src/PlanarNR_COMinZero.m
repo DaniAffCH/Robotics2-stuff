@@ -4,6 +4,9 @@ function [com] = PlanarNR_COMinZero(rci_from_i, linkLengths, qSym)
 %   - rci_from_i: column vector, position of COM expressed in frame i
 %   - linkLengths: row vector, the link lengths up to the i-th link
 %   - qSym: row vector, the q symbolics up to the i-th link
+%
+% Usage example for COM of 2-nd link:
+% PlanarNR_COMinZero([rc2x;rc2y;0], [l1, l2], [q1, q2])
 
 if(length(linkLengths) ~= length(qSym))
     disp("linkLengths dimension doesn't match qSym dimension");
