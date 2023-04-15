@@ -1,4 +1,4 @@
-function [omega_i,v_i, v_ci] = movingFrameGeneric(alpha_i,theta_i, qi_dot, omega_prec, v_prec, isPrismatic, r_from_i, rci_from_i)
+function [omega_i,v_i, v_ci, Ti] = movingFrameGeneric(alpha_i,theta_i, qi_dot, omega_prec, v_prec, isPrismatic, r_from_i, rci_from_i, I, m)
 %MOVINGFRAMEGENERIC This function compute the Moving Frames parameters for
 %   one step
 %   example:  
@@ -25,6 +25,10 @@ function [omega_i,v_i, v_ci] = movingFrameGeneric(alpha_i,theta_i, qi_dot, omega
 %
 %   - rci_from_i: the i-th center of mass position expressed in i-th frame
 %   (AS COLUMN VECTOR)
+%
+%   - I: inertia matrix 
+%
+%   - m: mass of i-th link
 
 R = [cos(theta_i)   -cos(alpha_i)*sin(theta_i)  sin(alpha_i)*sin(theta_i); 
      sin(theta_i)   cos(alpha_i)*cos(theta_i)   -sin(alpha_i)*sin(theta_i);
@@ -39,5 +43,7 @@ v_i = simplify(v_i);
 v_ci = v_i + cross(omega_i, rci_from_i);
 v_ci = simplify(v_ci);
 
+Ti = 1/2*m*(v_ci.'*v_ci) + 1/2 *omega_i.'*I*omega_i;
+Ti = simplify(Ti);
 
 end
