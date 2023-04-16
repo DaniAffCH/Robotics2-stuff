@@ -24,7 +24,7 @@ git clone --recursive https://github.com/DaniAffCH/Robotics2-stuff.git
 
 ### Known issues
 Sometimes the trigonometric functions returns weird results if the argument contains the `pi`. This happens because of the float (or double) precision. In order to fix that use
-`sym(pi)` instead of 'pi'.
+`sym(pi)` instead of `pi`.
 
 E.g.
 ```
