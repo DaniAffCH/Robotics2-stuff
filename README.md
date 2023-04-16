@@ -21,3 +21,24 @@ Pay attention to the `--recursive` flag. It is required to clone also the submod
 ```bash
 git clone --recursive https://github.com/DaniAffCH/Robotics2-stuff.git
 ```
+
+### Known issues
+Sometimes the trigonometric functions returns weird results if the argument contains the `pi`. This happens because of the float (or double) precision. In order to fix that use
+`sym(pi)` instead of 'pi'.
+
+E.g.
+```
+>> cos(pi/2)
+
+ans =
+
+   6.1232e-17
+```
+
+```
+>> cos(sym(pi)/2)
+ 
+ans =
+ 
+  0
+```
