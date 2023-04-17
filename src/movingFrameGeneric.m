@@ -34,8 +34,6 @@ R = [cos(theta_i)   -cos(alpha_i)*sin(theta_i)  sin(alpha_i)*sin(theta_i);
      sin(theta_i)   cos(alpha_i)*cos(theta_i)   -sin(alpha_i)*cos(theta_i);
      0              sin(alpha_i)                cos(alpha_i)];
 
-disp(R);
-
 omega_i = R.' * (omega_prec + (1-isPrismatic)*qi_dot*[0;0;1]);
 omega_i = simplify(omega_i);
 
