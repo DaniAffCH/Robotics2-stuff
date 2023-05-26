@@ -52,7 +52,7 @@ function [S, A] = factorization(M, q, t)
     error_skew = (Mdot-2*S) + (Mdot-2*S).';
     error_alternative = (Mdot-2*A) + (Mdot-2*A).';
 
-    if isequal(error_skew, sym(zeros(size))) && isequal(simplify(S*qdot.'), c)
+    if isequal(error_skew, sym(zeros(size))) && isequal(S*qdot.', c)
         disp('Good job');
     else
         disp('Error')
