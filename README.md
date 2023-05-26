@@ -1,5 +1,11 @@
 # Robotics2-stuff
 
+This repository provides a set of matlab functions useful for robot dynamics computations. There is also an external module that refers to [r2_toolbox](https://github.com/EmanueleGiacomini/r2_toolbox) covering most of the topics disregarded in this repository. 
+
+The functions have been developed for the course Robotics2@Sapienza, however they have been designed to be as generic as possible. 
+
+# Functions available
+
 | Script | Tested | Description | Author |
 | ------------- | ------------- | ------------- | ------------- |
 | calibrationStep.m  | :heavy_check_mark: | Single step of calibration algorithm | [@DaniAffCH](https://www.github.com/DaniAffCH) |
