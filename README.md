@@ -1,5 +1,11 @@
 # Robotics2-stuff
 
+This repository provides a set of matlab functions useful for robot dynamics computations. There is also an external module that refers to [r2_toolbox](https://github.com/EmanueleGiacomini/r2_toolbox) covering most of the topics disregarded in this repository. 
+
+The functions have been developed for the course Robotics2@Sapienza, however they have been designed to be as generic as possible. 
+
+# Functions available
+
 | Script | Tested | Description | Author |
 | ------------- | ------------- | ------------- | ------------- |
 | calibrationStep.m  | :heavy_check_mark: | Single step of calibration algorithm | [@DaniAffCH](https://www.github.com/DaniAffCH) |
@@ -9,7 +15,7 @@
 | movingFrames2R.m  | :heavy_multiplication_x: | Apply moving frames (Dynamic model estimation) to 2R robot | [@luigi-ga](https://www.github.com/luigi-ga) |
 | movingFrames3R.m  | :heavy_multiplication_x: | Apply moving frames (Dynamic model estimation) to 3R robot | [@luigi-ga](https://www.github.com/luigi-ga) |
 | DHMatrix.m  | :heavy_check_mark: | Compute homogeneous transf. from DH table parameters | [@luigi-ga](https://www.github.com/luigi-ga) |
-| factorization.m  | :heavy_check_mark: | Compute the Christoffel factorization $c(q, \dot{q}) = S\dot{q}$| [@francomano](https://www.github.com/francomano) &[@Pab99lis](https://github.com/Pab99lis)|
+| factorization.m  | :heavy_check_mark: | Compute the Christoffel factorization $c(q, \dot{q}) = S\dot{q}$. It provides both an $S_1$ such that $\dot{M} - 2S_1$ is skewsymmetric and $S_2$ that doesn't meet such condition| [@francomano](https://www.github.com/francomano) & [@Pab99lis](https://github.com/Pab99lis) |
 | taskPriority.m | :heavy_check_mark: | Compute Task Priority algorithm up to 2 tasks | [@francomano](https://www.github.com/francomano) & [@DavideEspositoPelella](https://www.github.com/DavideEspositoPelella) |
 | n_task_priority.m | :heavy_check_mark: | Compute Task Priority algorithm up to N tasks | [@ValerioSpagnoli](https://github.com/ValerioSpagnoli)|
 | external dynamic submodule | :heavy_check_mark: | It isn't fully tested yet but most of the scripts are fine so far | [@EmanueleGiacomini](https://www.github.com/EmanueleGiacomini) |
