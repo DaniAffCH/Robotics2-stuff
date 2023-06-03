@@ -36,6 +36,6 @@ v_i = simplify(R.' * (v_prec + isPrismatic*qi_dot*[0;0;1]) + cross(omega_i, r_fr
 v_ci = v_i + cross(omega_i, rci_from_i);
 v_ci = simplify(v_ci);
 
-Ti = 1/2*m*(v_ci.'*v_ci) + 1/2 *omega_i.'*I*omega_i;
+Ti = simplifyFraction(1/2*m*(v_ci.'*v_ci) + 1/2 *omega_i.'*I*omega_i);
 
 end
