@@ -1,4 +1,4 @@
-function [S, A] = factorization(M, q, t)
+function [S, c, A] = factorization(M, q, t)
 %   takes as inputs:
 %   -M: inertia-Matrix
 %   -q: vector of coordinates composed like this [q1(t),q2(t)] as a function of time
@@ -23,43 +23,53 @@ function [S, A] = factorization(M, q, t)
         fprintf(1,'Christoffel C%d = \n',i);
         disp(C_i);
         S(i,:)=qdot*C_i;
-        c(i)=S(i,:)*qdot.';
+        c(i)=simplifyFraction(S(i,:)*qdot.');
     end
     fprintf('Coriolis and centrifugal term = \n');
     disp(c);
     
-    if size == 2
-        S0 = [-qdot(2) qdot(1);0 0];
-    elseif size == 3
-        S0 = [0, -qdot(3), qdot(2); qdot(3), 0, -qdot(1);-qdot(2), qdot(1), 0];
-    else 
-        fprintf('Not implemented!');
-    end
-
-    A = simplify(S+S0);
-    S = simplify(S);
-
+    S = simplifyFraction(S);
     fprintf('Skew symmetric factorization= \n');
     disp(S);
 
-    fprintf('Another factorization= \n');
-    disp(A);
-
-    Mdot = simplify(diff(M, t));
+    Mdot = simplifyFraction(diff(M, t));
     fprintf('M dot = \n');
     disp(Mdot);
-
-    error_skew = (Mdot-2*S) + (Mdot-2*S).';
-    error_alternative = (Mdot-2*A) + (Mdot-2*A).';
-
-    if isequal(error_skew, sym(zeros(size))) && isequal(simplify(S*qdot.'), c)
-        disp('Good job');
-    else
-        disp('Error')
+    
+    error_skew = simplifyFraction((Mdot-2*S) + (Mdot-2*S).');
+    
+    if size>3
+        fprintf('S0, Not implemented! Only one factorization available');
+        A = eye(size);
     end
-    if ~isequal(error_alternative, sym(zeros(size))) && isequal(simplify(A*qdot.'), c)
+
+    if size == 2
+        S0 = [-qdot(2) qdot(1);0 0];
+        A = simplifyFraction(S+S0);
+        fprintf('Another factorization= \n');
+        disp(A);
+        error_alternative = simplifyFraction((Mdot-2*A) + (Mdot-2*A).');
+    elseif size == 3
+        S0 = [0, -qdot(3), qdot(2); qdot(3), 0, -qdot(1);-qdot(2), qdot(1), 0];
+        A = simplifyFraction(S+S0);
+        fprintf('Another factorization= \n');
+        disp(A);
+        error_alternative = simplify((Mdot-2*A) + (Mdot-2*A).');
+    end
+
+    disp('Mdot-2S:')
+    disp(simplify(Mdot-2*S))
+
+    if isequal(error_skew, sym(zeros(size))) && isequal(simplifyFraction(S*qdot.'), c)
         disp('Good job');
     else
-        disp('Error');
+        disp('Error');    
+    end
+    if size<=3
+        if ~isequal(error_alternative, sym(zeros(size))) && isequal(simplifyFraction(A*qdot.'), c)
+            disp('Good job');
+        else
+            disp('Error');
+        end
     end
 end

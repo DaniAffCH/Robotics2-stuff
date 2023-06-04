@@ -19,6 +19,7 @@ The functions have been developed for the course Robotics2@Sapienza, however the
 | taskPriority.m | :heavy_check_mark: | Compute Task Priority algorithm up to 2 tasks | [@francomano](https://www.github.com/francomano) & [@DavideEspositoPelella](https://www.github.com/DavideEspositoPelella) |
 | n_task_priority.m | :heavy_check_mark: | Compute Task Priority algorithm up to N tasks | [@ValerioSpagnoli](https://github.com/ValerioSpagnoli)|
 | coordinateChange.m | :heavy_check_mark: | Dynamic model after linear transformation of generalized coordinates | [@Pab99lis](https://github.com/Pab99lis)|
+| dynamicModel.mlx | :heavy_check_mark: | LiveScript for fast computation of dynamic model | [@Pab99lis](https://github.com/Pab99lis)|
 | external dynamic submodule | :heavy_check_mark: | It isn't fully tested yet but most of the scripts are fine so far | [@EmanueleGiacomini](https://www.github.com/EmanueleGiacomini) |
 
 
